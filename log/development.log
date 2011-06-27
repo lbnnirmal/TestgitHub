@@ -12,3 +12,11 @@
 Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-06-27 10:00:46) [GET]
   [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
 Completed in 125ms (View: 16, DB: 16) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-06-27 11:34:07) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/rails/info/properties]
