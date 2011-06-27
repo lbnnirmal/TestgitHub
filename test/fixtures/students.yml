@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Name: MyString
+  DOB: 2011-06-27
+  Age: 1
+
+two:
+  Name: MyString
+  DOB: 2011-06-27
+  Age: 1

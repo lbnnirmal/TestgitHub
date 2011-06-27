@@ -20,3 +20,178 @@ Completed in 125ms (View: 16, DB: 16) | 200 OK [http://localhost/rails/info/prop
 Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-06-27 11:34:07) [GET]
   [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
 Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-06-27 12:05:27) [GET]
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 78ms (View: 0, DB: 16) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-06-27 12:05:39) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mPGError: ERROR: relation "students" does not exist
+LINE 1: SELECT * FROM "students" 
+ ^
+: SELECT * FROM "students" [0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "students" does not exist
+LINE 1: SELECT * FROM "students" 
+                      ^
+: SELECT * FROM "students" ):
+  app/controllers/students_controller.rb:5:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-06-27 12:05:48) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mPGError: ERROR: relation "students" does not exist
+LINE 1: SELECT * FROM "students" 
+ ^
+: SELECT * FROM "students" [0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "students" does not exist
+LINE 1: SELECT * FROM "students" 
+                      ^
+: SELECT * FROM "students" ):
+  app/controllers/students_controller.rb:5:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateStudents (20110627063348)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mCREATE TABLE "students" ("id" serial primary key, "Name" character varying(255), "DOB" date, "Age" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110627063348')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-06-27 12:06:40) [GET]
+  [4;35;1mStudent Load (0.0ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 375ms (View: 359, DB: 0) | 200 OK [http://localhost/Students]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#new (for 127.0.0.1 at 2011-06-27 12:06:42) [GET]
+Rendering template within layouts/students
+Rendering students/new
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://localhost/students/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#create (for 127.0.0.1 at 2011-06-27 12:06:53) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"zOmhpoLl28Q/YObeNK8pHUvr26XqGQVlyR+6utVEpSA=", "student"=>{"DOB(1i)"=>"2006", "Name"=>"nirmal", "DOB(2i)"=>"9", "DOB(3i)"=>"27", "Age"=>"24"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "students" ("DOB", "created_at", "Name", "updated_at", "Age") VALUES('2006-09-27', '2011-06-27 06:36:53.801747', 'nirmal', '2011-06-27 06:36:53.801747', 24) RETURNING "id"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/students/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/students]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2011-06-27 12:06:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 1) [0m
+Rendering template within layouts/students
+Rendering students/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/students/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-06-27 12:06:55) [GET]
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" [0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/students]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#edit (for 127.0.0.1 at 2011-06-27 12:07:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 1) [0m
+Rendering template within layouts/students
+Rendering students/edit
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/students/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#update (for 127.0.0.1 at 2011-06-27 12:07:04) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zOmhpoLl28Q/YObeNK8pHUvr26XqGQVlyR+6utVEpSA=", "id"=>"1", "student"=>{"DOB(1i)"=>"2006", "Name"=>"nirmal", "DOB(2i)"=>"9", "DOB(3i)"=>"27", "Age"=>"25"}}
+  [4;36;1mStudent Load (0.0ms)[0m   [0;1mSELECT * FROM "students" WHERE ("students"."id" = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStudent Update (0.0ms)[0m   [0;1mUPDATE "students" SET "updated_at" = '2011-06-27 06:37:04.145563', "Age" = 25 WHERE "id" = 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/students/1
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/students/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#show (for 127.0.0.1 at 2011-06-27 12:07:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" WHERE ("students"."id" = 1) [0m
+Rendering template within layouts/students
+Rendering students/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/students/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing StudentsController#index (for 127.0.0.1 at 2011-06-27 12:07:06) [GET]
+  [4;35;1mStudent Load (15.6ms)[0m   [0mSELECT * FROM "students" [0m
+Rendering template within layouts/students
+Rendering students/index
+Completed in 47ms (View: 16, DB: 31) | 200 OK [http://localhost/students]
